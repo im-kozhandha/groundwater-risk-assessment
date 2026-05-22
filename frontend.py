@@ -19,7 +19,7 @@ st.set_page_config(
     initial_sidebar_state="expanded",
 )
 
-API_URL = "http://localhost:8000"
+API_URL = "https://groundwater-risk-assessment.onrender.com"
 
 # ─── Design System ──────────────────────────────────────────
 st.markdown("""
