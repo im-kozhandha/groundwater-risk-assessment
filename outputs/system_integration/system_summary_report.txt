@@ -1,0 +1,25 @@
+
+GROUNDWATER RISK DECISION SUPPORT SYSTEM – SUMMARY
+
+System Capabilities:
+• Supports location-only, chemistry-only, and hybrid inputs
+• Uses spatial interpolation and ML classification
+• Confidence-aware decision fusion implemented
+
+Models Used:
+• Spatial IDW with BallTree (Notebook 04)
+• XGBoost classifier (Notebook 05)
+
+Risk Categories:
+• SAFE
+• MODERATE
+• HIGH
+
+Confidence Interpretation:
+• >75%  → High confidence (planning-grade)
+• 50–75% → Medium confidence (verify if critical)
+• <50%  → Low confidence (field sampling required)
+
+System Status:
+• Validation successful
+• Ready for deployment and UI integration

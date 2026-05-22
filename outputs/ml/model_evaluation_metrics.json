@@ -1,0 +1,66 @@
+{
+  "model_info": {
+    "best_model": "XGBoost",
+    "training_date": "2026-02-07 18:23:37",
+    "feature_set": [
+      "pH",
+      "NO3",
+      "F_mgL",
+      "Cl_mgL",
+      "SO4",
+      "Ca_mgL",
+      "Mg_mgL",
+      "Na_mgL",
+      "K_mgL"
+    ],
+    "target_classes": [
+      "SAFE",
+      "MODERATE",
+      "HIGH"
+    ],
+    "class_weights": {
+      "0": 1.428939617083947,
+      "1": 0.7180388529139685,
+      "2": 1.101930721181147
+    }
+  },
+  "performance_metrics": {
+    "test_accuracy": 0.9738921332875301,
+    "test_macro_f1": 0.9737967298044365,
+    "test_weighted_f1": 0.9738663948407746,
+    "test_macro_precision": 0.9738184782955778,
+    "test_macro_recall": 0.9738306895325136,
+    "class_wise_f1": {
+      "SAFE": 0.9681717246484086,
+      "MODERATE": 0.971830985915493,
+      "HIGH": 0.9813874788494078
+    }
+  },
+  "robustness_checks": {
+    "cross_validation_scores": [
+      0.9812657622277303,
+      0.9707246935765713,
+      0.9792455190391437,
+      0.9813426944859954,
+      0.97489932135259
+    ],
+    "cross_validation_mean": 0.9774955981364062,
+    "cross_validation_std": 0.004114907349162207,
+    "train_test_gap": 0.022867232290248674,
+    "ablation_study": {
+      "removed_feature": "Cl_mgL",
+      "performance_without": 0.9597099939339339
+    }
+  },
+  "feature_importance": {
+    "Cl_mgL": 0.2652629315853119,
+    "NO3": 0.24466586112976074,
+    "Mg_mgL": 0.16487404704093933,
+    "Ca_mgL": 0.09436997026205063,
+    "F_mgL": 0.07348993420600891,
+    "Na_mgL": 0.06468760222196579,
+    "SO4": 0.041822027415037155,
+    "pH": 0.04049689695239067,
+    "K_mgL": 0.010330747812986374
+  }
+}

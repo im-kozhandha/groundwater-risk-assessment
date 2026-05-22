@@ -1,0 +1,13 @@
+{
+  "total_scenarios_tested": 6,
+  "successful_predictions": 6,
+  "average_confidence": 0.9401502544753956,
+  "risk_distribution": {
+    "SAFE": 2,
+    "MODERATE": 3,
+    "HIGH": 1,
+    "OTHER": 0
+  },
+  "system_version": "v1.0",
+  "date": "2026-02-08T21:39:08.205308"
+}

@@ -1,0 +1,314 @@
+{
+  "Delhi Central (Dense Urban)": {
+    "scenario_name": "Delhi Central (Dense Urban)",
+    "scenario_type": "Location + Chemistry",
+    "description": "Well-monitored urban area with typical hydrochemistry",
+    "timestamp": "2026-02-08T21:39:08.979902",
+    "input_data": {
+      "name": "Delhi Central (Dense Urban)",
+      "type": "Location + Chemistry",
+      "latitude": 28.6139,
+      "longitude": 77.209,
+      "chemistry": {
+        "pH": 7.8,
+        "NO3": 25.0,
+        "F_mgL": 0.8,
+        "Cl_mgL": 180.0,
+        "SO4": 120.0,
+        "Ca_mgL": 75.0,
+        "Mg_mgL": 35.0,
+        "Na_mgL": 90.0,
+        "K_mgL": 8.0
+      },
+      "description": "Well-monitored urban area with typical hydrochemistry"
+    },
+    "prediction_result": {
+      "success": true,
+      "risk_label": "MODERATE",
+      "risk_score": 1,
+      "confidence": 0.95,
+      "probabilities": {
+        "SAFE": 0.0002802833332680166,
+        "MODERATE": 0.9986066222190857,
+        "HIGH": 0.0011130841448903084
+      },
+      "feature_importance": {
+        "pH": 0.04049689695239067,
+        "NO3": 0.24466586112976074,
+        "F_mgL": 0.07348993420600891,
+        "Cl_mgL": 0.2652629315853119,
+        "SO4": 0.041822027415037155,
+        "Ca_mgL": 0.09436997026205063,
+        "Mg_mgL": 0.16487404704093933,
+        "Na_mgL": 0.06468760222196579,
+        "K_mgL": 0.010330747812986374
+      },
+      "method": "ML Classification",
+      "decision_source": "ML",
+      "decision_reason": "ML prediction has very high confidence (\u226580%)",
+      "ml_confidence": 0.95,
+      "spatial_confidence": 0.9628914246289919,
+      "fused_confidence": 0.95,
+      "input_type": "Location + Chemistry",
+      "risk_summary": "Predicted risk: MODERATE (confidence: 95%). Some parameters exceed safe limits. Consider monitoring and potential treatment for sensitive uses.",
+      "method_explanation": "Prediction method: ML Classification. Decision source: ML. ML prediction has very high confidence (\u226580%)",
+      "confidence_interpretation": "Confidence level: High. Suitable for decision-making.",
+      "key_parameters": "Key risk drivers: Cl_mgL, NO3, Mg_mgL"
+    }
+  },
+  "Hyderabad (Moderate Urban)": {
+    "scenario_name": "Hyderabad (Moderate Urban)",
+    "scenario_type": "Location Only",
+    "description": "Urban area with moderate monitoring density",
+    "timestamp": "2026-02-08T21:39:08.979938",
+    "input_data": {
+      "name": "Hyderabad (Moderate Urban)",
+      "type": "Location Only",
+      "latitude": 17.385,
+      "longitude": 78.4867,
+      "chemistry": null,
+      "description": "Urban area with moderate monitoring density"
+    },
+    "prediction_result": {
+      "success": true,
+      "risk_label": "MODERATE",
+      "risk_score": 1,
+      "confidence": 0.9675916809982421,
+      "probabilities": {
+        "SAFE": 0.0006885131588205695,
+        "MODERATE": 0.9976083040237427,
+        "HIGH": 0.0017031440511345863
+      },
+      "feature_importance": {
+        "pH": 0.04049689695239067,
+        "NO3": 0.24466586112976074,
+        "F_mgL": 0.07348993420600891,
+        "Cl_mgL": 0.2652629315853119,
+        "SO4": 0.041822027415037155,
+        "Ca_mgL": 0.09436997026205063,
+        "Mg_mgL": 0.16487404704093933,
+        "Na_mgL": 0.06468760222196579,
+        "K_mgL": 0.010330747812986374
+      },
+      "method": "Spatial + ML Hybrid",
+      "neighbor_count": 5,
+      "mean_distance_km": 1.852079750439464,
+      "spatial_confidence": 0.9851833619964843,
+      "combined_confidence": 0.9675916809982421,
+      "input_type": "Location Only",
+      "risk_summary": "Predicted risk: MODERATE (confidence: 97%). Some parameters exceed safe limits. Consider monitoring and potential treatment for sensitive uses.",
+      "method_explanation": "Prediction method: Spatial + ML Hybrid. Decision source: Unknown. ",
+      "confidence_interpretation": "Confidence level: High. Suitable for decision-making.",
+      "key_parameters": "Key risk drivers: Cl_mgL, NO3, Mg_mgL",
+      "spatial_context": "Based on 5 nearby monitoring points (average distance: 1.9 km)."
+    }
+  },
+  "Haryana Rural (Agricultural)": {
+    "scenario_name": "Haryana Rural (Agricultural)",
+    "scenario_type": "Chemistry Only",
+    "description": "Agricultural region with potential nitrate contamination",
+    "timestamp": "2026-02-08T21:39:08.979946",
+    "input_data": {
+      "name": "Haryana Rural (Agricultural)",
+      "type": "Chemistry Only",
+      "latitude": null,
+      "longitude": null,
+      "chemistry": {
+        "pH": 8.2,
+        "NO3": 85.0,
+        "F_mgL": 1.2,
+        "Cl_mgL": 320.0,
+        "SO4": 180.0,
+        "Ca_mgL": 95.0,
+        "Mg_mgL": 45.0,
+        "Na_mgL": 150.0,
+        "K_mgL": 15.0
+      },
+      "description": "Agricultural region with potential nitrate contamination"
+    },
+    "prediction_result": {
+      "success": true,
+      "risk_label": "HIGH",
+      "risk_score": 2,
+      "confidence": 0.95,
+      "probabilities": {
+        "SAFE": 9.156729356618598e-05,
+        "MODERATE": 0.0007370476960204542,
+        "HIGH": 0.9991713762283325
+      },
+      "feature_importance": {
+        "pH": 0.04049689695239067,
+        "NO3": 0.24466586112976074,
+        "F_mgL": 0.07348993420600891,
+        "Cl_mgL": 0.2652629315853119,
+        "SO4": 0.041822027415037155,
+        "Ca_mgL": 0.09436997026205063,
+        "Mg_mgL": 0.16487404704093933,
+        "Na_mgL": 0.06468760222196579,
+        "K_mgL": 0.010330747812986374
+      },
+      "method": "ML Classification",
+      "input_type": "Chemistry Only",
+      "risk_summary": "Predicted risk: HIGH (confidence: 95%). Multiple parameters exceed safe limits. Immediate investigation and treatment recommended.",
+      "method_explanation": "Prediction method: ML Classification. Decision source: Unknown. ",
+      "confidence_interpretation": "Confidence level: High. Suitable for decision-making.",
+      "key_parameters": "Key risk drivers: Cl_mgL, NO3, Mg_mgL"
+    }
+  },
+  "North-East Sparse Region": {
+    "scenario_name": "North-East Sparse Region",
+    "scenario_type": "Location Only",
+    "description": "Data-sparse region with few monitoring points",
+    "timestamp": "2026-02-08T21:39:08.979951",
+    "input_data": {
+      "name": "North-East Sparse Region",
+      "type": "Location Only",
+      "latitude": 27.5,
+      "longitude": 94.5,
+      "chemistry": null,
+      "description": "Data-sparse region with few monitoring points"
+    },
+    "prediction_result": {
+      "success": true,
+      "risk_label": "SAFE",
+      "risk_score": 0,
+      "confidence": 0.9215947150627094,
+      "probabilities": {
+        "SAFE": 0.9899201393127441,
+        "MODERATE": 0.009678862988948822,
+        "HIGH": 0.0004009600670542568
+      },
+      "feature_importance": {
+        "pH": 0.04049689695239067,
+        "NO3": 0.24466586112976074,
+        "F_mgL": 0.07348993420600891,
+        "Cl_mgL": 0.2652629315853119,
+        "SO4": 0.041822027415037155,
+        "Ca_mgL": 0.09436997026205063,
+        "Mg_mgL": 0.16487404704093933,
+        "Na_mgL": 0.06468760222196579,
+        "K_mgL": 0.010330747812986374
+      },
+      "method": "Spatial + ML Hybrid",
+      "neighbor_count": 5,
+      "mean_distance_km": 13.351321234322645,
+      "spatial_confidence": 0.8931894301254188,
+      "combined_confidence": 0.9215947150627094,
+      "input_type": "Location Only",
+      "risk_summary": "Predicted risk: SAFE (confidence: 92%). All estimated parameters are within safe drinking water limits.",
+      "method_explanation": "Prediction method: Spatial + ML Hybrid. Decision source: Unknown. ",
+      "confidence_interpretation": "Confidence level: High. Suitable for decision-making.",
+      "key_parameters": "Key risk drivers: Cl_mgL, NO3, Mg_mgL",
+      "spatial_context": "Based on 5 nearby monitoring points (average distance: 13.4 km)."
+    }
+  },
+  "Conflict Case Simulated": {
+    "scenario_name": "Conflict Case Simulated",
+    "scenario_type": "Location + Chemistry",
+    "description": "Simulated case where ML and spatial predictions might differ",
+    "timestamp": "2026-02-08T21:39:08.979956",
+    "input_data": {
+      "name": "Conflict Case Simulated",
+      "type": "Location + Chemistry",
+      "latitude": 26.9124,
+      "longitude": 75.7873,
+      "chemistry": {
+        "pH": 7.5,
+        "NO3": 15.0,
+        "F_mgL": 0.5,
+        "Cl_mgL": 80.0,
+        "SO4": 60.0,
+        "Ca_mgL": 40.0,
+        "Mg_mgL": 20.0,
+        "Na_mgL": 50.0,
+        "K_mgL": 5.0
+      },
+      "description": "Simulated case where ML and spatial predictions might differ"
+    },
+    "prediction_result": {
+      "success": true,
+      "risk_label": "SAFE",
+      "risk_score": 0,
+      "confidence": 0.901715130791422,
+      "probabilities": {
+        "SAFE": 0.9237334132194519,
+        "MODERATE": 0.0756618082523346,
+        "HIGH": 0.0006047892384231091
+      },
+      "feature_importance": {
+        "pH": 0.04049689695239067,
+        "NO3": 0.24466586112976074,
+        "F_mgL": 0.07348993420600891,
+        "Cl_mgL": 0.2652629315853119,
+        "SO4": 0.041822027415037155,
+        "Ca_mgL": 0.09436997026205063,
+        "Mg_mgL": 0.16487404704093933,
+        "Na_mgL": 0.06468760222196579,
+        "K_mgL": 0.010330747812986374
+      },
+      "method": "ML Classification",
+      "decision_source": "ML",
+      "decision_reason": "ML prediction has very high confidence (\u226580%)",
+      "ml_confidence": 0.901715130791422,
+      "spatial_confidence": 0.8677867717793167,
+      "fused_confidence": 0.901715130791422,
+      "input_type": "Location + Chemistry",
+      "risk_summary": "Predicted risk: SAFE (confidence: 90%). All estimated parameters are within safe drinking water limits.",
+      "method_explanation": "Prediction method: ML Classification. Decision source: ML. ML prediction has very high confidence (\u226580%)",
+      "confidence_interpretation": "Confidence level: High. Suitable for decision-making.",
+      "key_parameters": "Key risk drivers: Cl_mgL, NO3, Mg_mgL"
+    }
+  },
+  "Borderline Chemistry": {
+    "scenario_name": "Borderline Chemistry",
+    "scenario_type": "Chemistry Only",
+    "description": "Borderline parameters near BIS thresholds",
+    "timestamp": "2026-02-08T21:39:08.979960",
+    "input_data": {
+      "name": "Borderline Chemistry",
+      "type": "Chemistry Only",
+      "latitude": null,
+      "longitude": null,
+      "chemistry": {
+        "pH": 8.4,
+        "NO3": 42.0,
+        "F_mgL": 1.4,
+        "Cl_mgL": 245.0,
+        "SO4": 195.0,
+        "Ca_mgL": 85.0,
+        "Mg_mgL": 40.0,
+        "Na_mgL": 120.0,
+        "K_mgL": 12.0
+      },
+      "description": "Borderline parameters near BIS thresholds"
+    },
+    "prediction_result": {
+      "success": true,
+      "risk_label": "MODERATE",
+      "risk_score": 1,
+      "confidence": 0.95,
+      "probabilities": {
+        "SAFE": 0.00032571761403232813,
+        "MODERATE": 0.9918671250343323,
+        "HIGH": 0.007807205896824598
+      },
+      "feature_importance": {
+        "pH": 0.04049689695239067,
+        "NO3": 0.24466586112976074,
+        "F_mgL": 0.07348993420600891,
+        "Cl_mgL": 0.2652629315853119,
+        "SO4": 0.041822027415037155,
+        "Ca_mgL": 0.09436997026205063,
+        "Mg_mgL": 0.16487404704093933,
+        "Na_mgL": 0.06468760222196579,
+        "K_mgL": 0.010330747812986374
+      },
+      "method": "ML Classification",
+      "input_type": "Chemistry Only",
+      "risk_summary": "Predicted risk: MODERATE (confidence: 95%). Some parameters exceed safe limits. Consider monitoring and potential treatment for sensitive uses.",
+      "method_explanation": "Prediction method: ML Classification. Decision source: Unknown. ",
+      "confidence_interpretation": "Confidence level: High. Suitable for decision-making.",
+      "key_parameters": "Key risk drivers: Cl_mgL, NO3, Mg_mgL"
+    }
+  }
+}

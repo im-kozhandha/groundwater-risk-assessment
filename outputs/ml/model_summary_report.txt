@@ -1,0 +1,51 @@
+
+GROUNDWATER RISK CLASSIFICATION MODEL - SUMMARY REPORT
+Generated: 2026-02-07 18:23:38
+
+MODEL INFORMATION
+-----------------
+Best Model: XGBoost
+Training Samples: 11,643
+Test Samples: 2,911
+Features Used: 9
+Target Classes: SAFE (0), MODERATE (1), HIGH (2)
+
+PERFORMANCE SUMMARY
+-------------------
+Test Accuracy: 0.9739
+Test Macro F1: 0.9738 (primary metric)
+Test Weighted F1: 0.9739
+
+Class-wise Performance:
+  SAFE:     F1 = 0.968
+  MODERATE: F1 = 0.972
+  HIGH:     F1 = 0.981
+
+TOP 5 IMPORTANT FEATURES
+------------------------
+Feature  Importance
+ Cl_mgL      0.2653
+    NO3      0.2447
+ Mg_mgL      0.1649
+ Ca_mgL      0.0944
+  F_mgL      0.0735
+
+ROBUSTNESS CHECKS
+-----------------
+Cross-validation (5-fold): 0.977 (±0.004)
+Train-test gap: 0.023
+Performance without top feature (Cl_mgL): 0.960
+
+DATA INTEGRITY
+--------------
+• No leakage features included
+• Multicollinearity addressed
+• Class weighting applied for imbalance
+• Realistic performance achieved
+
+CONCLUSIONS
+-----------
+1. Model successfully learns hydrochemical patterns for risk prediction
+2. Feature importance aligns with known groundwater contaminants in India
+3. Performance robust across validation strategies
+4. Model ready for integration into risk assessment system

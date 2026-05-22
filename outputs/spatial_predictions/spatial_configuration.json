@@ -1,0 +1,78 @@
+{
+  "spatial_parameters": {
+    "default_k": 5,
+    "default_max_distance_km": 50,
+    "idw_power": 2,
+    "confidence_weights": {
+      "estimation": 0.4,
+      "neighbors": 0.2,
+      "availability": 0.2,
+      "distance": 0.2
+    }
+  },
+  "risk_classification": {
+    "SAFE": "risk_score = 0",
+    "MODERATE": "risk_score = 1-2",
+    "HIGH": "risk_score >= 3"
+  },
+  "data_statistics": {
+    "total_locations": 14552,
+    "risk_distribution": {
+      "MODERATE": "6757",
+      "HIGH": "4402",
+      "SAFE": "3393"
+    },
+    "parameter_ranges": {
+      "pH": {
+        "min": 2.54,
+        "max": 9.85,
+        "mean": 7.682578339747114
+      },
+      "NO3": {
+        "min": 0.0,
+        "max": 2296.0,
+        "mean": 33.30978559648158
+      },
+      "F_mgL": {
+        "min": 0.0,
+        "max": 22.0,
+        "mean": 0.7398426333150081
+      },
+      "Cl_mgL": {
+        "min": 0.0,
+        "max": 41665.0,
+        "mean": 188.87348818031884
+      },
+      "SO4": {
+        "min": 0.0,
+        "max": 5760.0,
+        "mean": 79.84558823529412
+      },
+      "Ca_mgL": {
+        "min": 1.0,
+        "max": 2044.0,
+        "mean": 65.81974986256185
+      },
+      "Mg_mgL": {
+        "min": -141.0,
+        "max": 1474.0,
+        "mean": 42.68382352941177
+      },
+      "Na_mgL": {
+        "min": 0.0,
+        "max": 22437.0,
+        "mean": 138.42853216052777
+      },
+      "K_mgL": {
+        "min": 0.0,
+        "max": 2040.0,
+        "mean": 14.412371134020619
+      },
+      "Total_Hardness_mgL": {
+        "min": 7.0,
+        "max": 8847.0,
+        "mean": 339.7694474986256
+      }
+    }
+  }
+}

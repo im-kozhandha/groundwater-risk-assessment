@@ -1,0 +1,34 @@
+{
+  "confidence_thresholds": {
+    "high": 0.75,
+    "medium": 0.5,
+    "low": 0.25
+  },
+  "fusion_rules": [
+    {
+      "rule": "ML priority",
+      "condition": "ml_confidence >= 0.80",
+      "action": "Use ML prediction"
+    },
+    {
+      "rule": "Spatial override",
+      "condition": "spatial_confidence >= ml_confidence + 0.20",
+      "action": "Use spatial prediction"
+    },
+    {
+      "rule": "Hybrid agreement",
+      "condition": "|ml_confidence - spatial_confidence| < 0.10",
+      "action": "Hybrid decision (average confidence)"
+    },
+    {
+      "rule": "Default fallback",
+      "condition": "Else",
+      "action": "Select higher confidence method"
+    }
+  ],
+  "risk_interpretation": {
+    "SAFE": "All parameters within BIS limits",
+    "MODERATE": "Some parameters exceed limits",
+    "HIGH": "Multiple parameters exceed limits"
+  }
+}

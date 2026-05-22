@@ -1,0 +1,9 @@
+demo_id,location,type,lat,lon,risk_label,risk_score,confidence,neighbors,mean_distance,exceedant_params,estimation_status,confidence_bin
+1,Delhi Central - Well-sampled urban area,urban,28.6139,77.209,MODERATE,2,0.9842588520176896,5,3.027143842752017,"['TDS_mgL', 'Total_Hardness_mgL']",OK,Very High (>90%)
+2,Jaipur - Moderately sampled urban area,urban,26.9124,75.7873,HIGH,4,0.8606228033131118,5,26.80330705517081,"['TDS_mgL', 'NO3', 'Cl_mgL', 'Total_Hardness_mgL']",OK,High (60-90%)
+3,Kolkata - Well-sampled urban area,urban,22.5726,88.3639,HIGH,3,0.9848076111750045,5,2.9216132355760926,"['TDS_mgL', 'Cl_mgL', 'Total_Hardness_mgL']",OK,Very High (>90%)
+4,Nashik District - Rural agricultural area,rural,19.9975,73.7898,MODERATE,1,0.9739870573059743,5,5.00248897962034,['Total_Hardness_mgL'],OK,Very High (>90%)
+5,Goa Hinterland - Sparsely sampled rural,rural,15.2993,74.124,SAFE,0,0.945487710829853,5,10.483132532720589,[],OK,Very High (>90%)
+6,Srinagar Valley - Data-sparse region,sparse,34.0837,74.7973,MODERATE,2,0.8445187577666082,5,29.90023889103687,"['TDS_mgL', 'Total_Hardness_mgL']",OK,High (60-90%)
+7,Mysore Rural - Moderate sampling,rural,12.2958,76.6394,MODERATE,2,0.9121440751901612,5,16.89537015573826,"['TDS_mgL', 'Total_Hardness_mgL']",OK,Very High (>90%)
+8,North Bihar - Data-sparse region,sparse,25.5941,85.1376,MODERATE,2,0.980318442891573,5,3.784914828543662,"['TDS_mgL', 'Total_Hardness_mgL']",OK,Very High (>90%)
