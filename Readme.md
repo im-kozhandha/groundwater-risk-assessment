@@ -5,8 +5,9 @@
 [![Streamlit](https://img.shields.io/badge/Streamlit-1.30.0-orange)](https://streamlit.io/)
 [![XGBoost](https://img.shields.io/badge/XGBoost-2.0.0-red)](https://xgboost.ai/)
 
-## Tagline
+
 Confidence-aware groundwater quality decision support for drinking water safety using BIS IS 10500:2012, hybrid ML, and spatial interpolation.
+NOW LIVE! : https://neerraa.streamlit.app/
 
 ## Overview
 This repository implements a pilot decision support system for groundwater chemical risk assessment in India. It combines data preprocessing, machine learning classification, spatial interpolation, and an interactive Streamlit frontend backed by a FastAPI prediction service.
