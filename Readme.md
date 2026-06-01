@@ -1,4 +1,4 @@
-﻿# Groundwater Risk Assessment DSS
+# Neerraa — Groundwater Risk Intelligence System
 
 [![Python](https://img.shields.io/badge/Python-3.11%2B-blue)](https://www.python.org/)
 [![FastAPI](https://img.shields.io/badge/FastAPI-0.104.0-green)](https://fastapi.tiangolo.com/)
@@ -6,30 +6,74 @@
 [![XGBoost](https://img.shields.io/badge/XGBoost-2.0.0-red)](https://xgboost.ai/)
 
 
-Confidence-aware groundwater quality decision support for drinking water safety using BIS IS 10500:2012, hybrid ML, and spatial interpolation.
-NOW LIVE! : https://neerraa.streamlit.app/
+Confidence-Aware Groundwater Quality Assessment using XGBoost, Spatial Intelligence, and BIS IS 10500:2012 Standards.
 
-## Overview
-This repository implements a pilot decision support system for groundwater chemical risk assessment in India. It combines data preprocessing, machine learning classification, spatial interpolation, and an interactive Streamlit frontend backed by a FastAPI prediction service.
+🌐 Live Demo: https://neerraa.streamlit.app/
+<img width="1919" height="959" alt="Screenshot 2026-06-01 143718" src="https://github.com/user-attachments/assets/880936a6-9eff-4c92-a41f-5f559b0ee3e2" />
+*Interactive groundwater risk assessment platform supporting ML, Spatial, and Hybrid prediction modes.*
+## Assessment Modes
 
-## Problem Statement
-Groundwater quality monitoring is often fragmented, noisy, and geographically sparse. Decision-makers need a practical system to classify drinking-water risk, explain exceedances, and estimate water quality at unsampled locations.
+| Mode | Input | Purpose |
+|--------|--------|--------|
+| ML | Water chemistry values | Predict risk using trained XGBoost model |
+| Spatial | Latitude & Longitude | Estimate groundwater quality from location |
+| Hybrid | Chemistry + Location | Combine both sources for maximum reliability |
+---
+## Why Neerraa?
 
-## Solution
-This project delivers a hybrid risk assessment pipeline:
-- ML-based risk classification from laboratory chemistry values
-- Spatial estimation via nearest-neighbor interpolation for location-only queries
-- Hybrid decision logic that chooses the most confident prediction source
-- Regulatory alignment with BIS IS 10500:2012 drinking water standards
+Groundwater testing is often expensive, infrequent, and geographically sparse.
 
-## Features
-- ML risk prediction with trained XGBoost classifier
-- Location-based spatial risk estimation using IDW and confidence scoring
-- Hybrid inference combining chemistry and coordinates
-- Interactive Streamlit UI with explanation, advice, and parameter dashboards
-- FastAPI backend with `/health`, `/standards`, and `/predict`
-- Cleaned groundwater data pipeline and reproducible preprocessing
-- Serialized model artifacts for deployment-ready inference
+Neerraa helps users assess groundwater safety through:
+
+- ML-based prediction from laboratory chemistry
+- Spatial estimation from geographic coordinates
+- Hybrid decision logic combining both approaches
+- BIS IS 10500:2012 regulatory interpretation
+- Explainable risk reports and treatment recommendations
+
+Unlike traditional water-quality tools, Neerraa can provide assessments even when complete laboratory measurements are unavailable.
+## At a Glance
+
+| Metric | Value |
+|----------|----------|
+| Training Samples | ~14,500 |
+| Algorithm | XGBoost |
+| Macro F1 | 0.97 |
+| Assessment Modes | 3 |
+| Deployment | Live |
+| Backend | FastAPI |
+| Frontend | Streamlit |
+## Key Features
+
+✅ XGBoost-based groundwater risk prediction
+
+✅ Spatial groundwater estimation using coordinates
+
+✅ Hybrid confidence-aware inference engine
+
+✅ Contaminant-level health risk explanations
+
+✅ BIS IS 10500:2012 compliance interpretation
+
+✅ FastAPI backend + Streamlit frontend
+
+✅ Live deployed application
+
+---
+## Model Performance
+
+| Metric | Score |
+|----------|----------|
+| Algorithm | XGBoost |
+| Macro F1 Score | 0.97 |
+| Dataset Size | ~14,500 Samples |
+| Standard | BIS IS 10500:2012 |
+| Deployment | Live |
+
+## System Architecture
+
+The platform combines machine learning, spatial intelligence, and regulatory rule-based reasoning into a unified groundwater decision-support pipeline.
+<img width="706" height="763" alt="image" src="https://github.com/user-attachments/assets/647c7a3e-ed53-47ed-811e-d1b577245f44" />
 
 ## Architecture Overview
 - `preprocessing/`: data cleaning pipeline for CGWB source CSV
@@ -148,14 +192,50 @@ streamlit run frontend.py
 
 ## Screenshots
 Visual examples are available in `assets/Interface/`:
-- `Screenshot 2026-05-23 004157.png`
-- `Screenshot 2026-05-23 004136.png`
-- `Screenshot 2026-05-23 004052.png`
-- `Screenshot 2026-05-23 002718.png`
+### Dashboard Overview
 
-## Demo
-- Local demo: start the backend and run `frontend.py`
-- Remote endpoint: the current Streamlit UI points to `https://groundwater-risk-assessment.onrender.com` by default
+Interactive interface supporting:
+
+- ML Prediction
+- Spatial Prediction
+- Hybrid Assessment
+<img width="1919" height="959" alt="Screenshot 2026-06-01 143718" src="https://github.com/user-attachments/assets/f40d4fd1-c1c6-4ae6-b6f5-5f043289a7fe" />
+
+### ML-Based Assessment
+
+Users enter groundwater chemistry values and receive a risk prediction with confidence scores.
+<img width="1919" height="911" alt="Screenshot 2026-06-01 143733" src="https://github.com/user-attachments/assets/edf5ba93-9a92-48d2-9024-465b014a5109" />
+
+### Spatial Groundwater Estimation
+
+Risk estimation using only latitude and longitude coordinates.
+<img width="1919" height="794" alt="Screenshot 2026-06-01 143751" src="https://github.com/user-attachments/assets/38b9e452-7420-4bb9-a2b8-ebf216d69b3b" />
+<img width="1919" height="913" alt="Screenshot 2026-06-01 143803" src="https://github.com/user-attachments/assets/6d87c36b-83c6-4a5f-85a2-e12b805f8f9c" />
+### Hybrid Intelligence Engine
+
+Combines chemistry measurements and location context to produce the most reliable assessment.
+<img width="1919" height="894" alt="Screenshot 2026-06-01 143849" src="https://github.com/user-attachments/assets/af978fc2-d8e8-44fa-a534-0e94c830e971" />
+<img width="1919" height="908" alt="Screenshot 2026-06-01 143905" src="https://github.com/user-attachments/assets/7baa2b2d-16d8-4cec-9f1d-98ca918c4454" />
+### Contaminant-Level Explanations
+
+For every exceeded parameter:
+
+- Cause
+- Health Risk
+- Corrective Action
+
+are generated automatically.
+<img width="1919" height="911" alt="Screenshot 2026-06-01 143923" src="https://github.com/user-attachments/assets/10ebb63e-0810-451b-9ee6-edeff7e5d1c9" />
+
+<img width="1917" height="913" alt="Screenshot 2026-06-01 143952" src="https://github.com/user-attachments/assets/a9cffa4b-0b1c-4d36-bcc4-b13def004d45" />
+<img width="1919" height="905" alt="Screenshot 2026-06-01 143939" src="https://github.com/user-attachments/assets/410ce705-d8f0-426e-b99d-d735fbc58db2" />
+
+
+## Project Impact
+
+Neerraa demonstrates how machine learning, spatial intelligence, and regulatory standards can be combined into a practical groundwater decision-support platform.
+
+The system enables water quality assessment even when laboratory measurements are incomplete, making it useful for early-stage screening and decision support.
 
 ## Future Improvements
 - Add a `Dockerfile` and container deployment workflow
@@ -165,30 +245,4 @@ Visual examples are available in `assets/Interface/`:
 - Add interactive map visualization for risk heatmaps
 - Implement a versioned model registry and deployment pipeline
 
-## Challenges Faced
-- Cleaning noisy PDF-derived groundwater data with repeated header rows
-- Correcting swapped latitude/longitude coordinates in the raw dataset
-- Handling sparse hydrochemical observations while preserving extreme contamination cases
-- Balancing standards-based exceedance logic with ML-derived risk classification
-- Providing explainable predictions for multiple user entry modes
 
-## Scalability Ideas
-- Split API and UI into separate services for independent scaling
-- Cache model responses and use vectorized batch prediction for bulk queries
-- Store models and datasets in cloud object storage for large-scale deployment
-- Add asynchronous request handling and rate limiting for production
-- Migrate to a dedicated data service or geospatial database if dataset grows
-
-## Contribution Guide
-1. Fork the repository
-2. Create a feature branch
-3. Install dependencies locally
-4. Open a pull request with a clear description
-
-> Note: no license file is included in this repository. Add a `LICENSE` if you want to clarify reuse rights.
-
-## Credits
-- Groundwater data preprocessing and domain analysis: `preprocessing/preprocess_groundwater_data.py`
-- Spatial confidence modeling: `spatial/spatial_models.py`
-- Prediction logic and API: `deploy/app.py`, `deploy/risk_predictor.py`
-- Interactive UI: `frontend.py`
